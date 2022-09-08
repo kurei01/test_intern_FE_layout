@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 75%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -19,6 +19,7 @@
   width: 9%;
   background-color: #191718;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .sidebar li {
@@ -37,17 +38,12 @@
   background-color: #5c5c5c;
   cursor: pointer;
 }
+@media screen and (max-width: 960px) {
+  .sidebar {
+    display: none;
+  }
+}
 
-@media screen and (max-width: 966px) {
-  .content .logo {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .content .logo {
-    width: 100px;
-  }
-}
 .content .logo {
   width: 310px;
   margin: 0 auto;
@@ -59,7 +55,7 @@
 .content .content-title {
   margin-top: 30px;
   background-color: #efefef;
-  padding: 38px 300px;
+  padding: 38px 200px;
   text-align: center;
 }
 .content .content-box {
@@ -79,7 +75,6 @@
 }
 .content .content-box .row .item .line1 {
   display: flex;
-  flex-wrap: 50px;
 }
 .content .content-box .row .item .line1 .thumbnail {
   min-width: 128px;
@@ -90,6 +85,69 @@
 }
 .content .content-box .row .item .line2 {
   margin-top: 6px;
+}
+@media screen and (max-width: 960px) {
+  .content {
+    margin-left: 9%;
+  }
+  .content .logo {
+    width: 200px;
+  }
+  .content .content-title {
+    margin-top: 30px;
+    padding: 25px 100px;
+  }
+  .content .content-box {
+    margin-top: 40px;
+  }
+  .content .content-box .row .item {
+    max-width: 250px;
+  }
+  .content .content-box .row .item .title {
+    size: 16px;
+  }
+  .content .content-box .row .item .line1 .thumbnail {
+    min-width: 60px;
+    margin-right: 5px;
+  }
+  .content .content-box .row .item .line1 .thumbnail img {
+    width: 100%;
+  }
+  .content .content-box .row .item .line2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .content .logo {
+    width: 100px;
+  }
+  .content .content-title {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  .content .content-box {
+    margin-top: 20px;
+  }
+  .content .content-box .row {
+    display: block;
+  }
+  .content .content-box .row .item {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+  .content .content-box .row .item .title {
+    size: 16px;
+  }
+  .content .content-box .row .item .line1 .thumbnail {
+    min-width: 60px;
+    margin-right: 5px;
+  }
+  .content .content-box .row .item .line1 .thumbnail img {
+    width: 100%;
+  }
+  .content .content-box .row .item .line2 {
+    display: none;
+  }
 }
 
 .Footer {

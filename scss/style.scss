@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 75%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -19,6 +19,7 @@
   width: 9%;
   background-color: #191718;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   li {
     height: 44px;
@@ -36,20 +37,12 @@
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 }
 
 .content {
-  @media screen and (max-width: 966px) {
-    .logo {
-      width: 200px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .logo {
-      width: 100px;
-    }
-  }
-
   .logo {
     width: 310px;
     margin: 0 auto;
@@ -61,7 +54,7 @@
   .content-title {
     margin-top: 30px;
     background-color: #efefef;
-    padding: 38px 300px;
+    padding: 38px 200px;
     text-align: center;
   }
   .content-box {
@@ -78,7 +71,6 @@
         }
         .line1 {
           display: flex;
-          flex-wrap: 50px;
           .thumbnail {
             min-width: 128px;
             margin-right: 16px;
@@ -89,6 +81,73 @@
         }
         .line2 {
           margin-top: 6px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    margin-left: 9%;
+    .logo {
+      width: 200px;
+    }
+    .content-title {
+      margin-top: 30px;
+      padding: 25px 100px;
+    }
+    .content-box {
+      margin-top: 40px;
+      .row {
+        .item {
+          max-width: 250px;
+          .title {
+            size: 16px;
+          }
+          .line1 {
+            .thumbnail {
+              min-width: 60px;
+              margin-right: 5px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+          .line2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .logo {
+      width: 100px;
+    }
+    .content-title {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    .content-box {
+      margin-top: 20px;
+      .row {
+        display: block;
+        .item {
+          margin-top: 20px;
+          max-width: 300px;
+          .title {
+            size: 16px;
+          }
+          .line1 {
+            .thumbnail {
+              min-width: 60px;
+              margin-right: 5px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+          .line2 {
+            display: none;
+          }
         }
       }
     }
