@@ -6,12 +6,13 @@
 }
 
 .container {
-  width: 1510px;
+  width: 75%;
   margin: 0 auto;
 }
 
 .wrapper {
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .sidebar {
@@ -37,9 +38,18 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 966px) {
+  .content .logo {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content .logo {
+    width: 100px;
+  }
+}
 .content .logo {
   width: 310px;
-  height: 122px;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -73,7 +83,6 @@
 }
 .content .content-box .row .item .line1 .thumbnail {
   min-width: 128px;
-  min-height: 128px;
   margin-right: 16px;
 }
 .content .content-box .row .item .line1 .thumbnail img {
