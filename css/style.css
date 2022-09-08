@@ -117,7 +117,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .content .logo {
     width: 100px;
   }
@@ -132,6 +132,7 @@
     display: block;
   }
   .content .content-box .row .item {
+    margin: 0 auto;
     margin-top: 20px;
     max-width: 300px;
   }
